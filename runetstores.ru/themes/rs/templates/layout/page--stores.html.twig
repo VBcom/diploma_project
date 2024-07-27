@@ -1,0 +1,22 @@
+{% if page.header %}
+<header class="header">
+{{ page.header }}
+</header>
+{% endif %}
+{% if page.content or page.sidebar_first %}
+<main class="main">
+<section class="sidebar">
+{% if page.sidebar_first %}
+{{ page.sidebar_first }}
+{% endif %}
+</section>
+<section class="main-content">
+{{ page.content }}
+</section>
+</main>
+{% endif %}
+{% if page.footer %}
+<footer class="footer">
+{{ page.footer }}
+</footer>
+{% endif %}

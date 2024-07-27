@@ -1,0 +1,8 @@
+{
+    "name": "drupal/title_field_for_manage_display",
+    "description": "Create Title widget to Display the Node Title.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {}
+}

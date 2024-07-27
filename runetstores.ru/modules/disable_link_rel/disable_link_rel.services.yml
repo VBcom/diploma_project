@@ -1,0 +1,7 @@
+services:
+  disable_link_rel.event_subscriber:
+    class: Drupal\disable_link_rel\EventSubscriber\DisableLinkRelSubscriber
+    tags:
+      - { name: event_subscriber }
+    arguments:
+      [ '@config.factory' ]

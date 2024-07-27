@@ -1,0 +1,27 @@
+{% if items.previous or items.next %}
+  <nav class="nav-pager">
+    <ul>
+      {% if items.previous %}
+        <li>
+          <a href="{{ items.previous.href }}" title="{{ 'Go to previous page'|t }}">
+            <span>{{ items.previous.text|default('‹‹'|t) }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {% if items.current %}
+        <li>
+          {% trans %}
+            Page {{ items.current }}
+          {% endtrans %}
+        </li>
+      {% endif %}
+      {% if items.next %}
+        <li>
+          <a href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}">
+            <span>{{ items.next.text|default('››'|t) }}</span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

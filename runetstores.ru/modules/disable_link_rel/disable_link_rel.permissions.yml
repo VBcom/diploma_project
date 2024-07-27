@@ -1,0 +1,3 @@
+administer disable_link_rel configuration:
+  title: 'Administer disable_link_rel configuration'
+  restrict access: true

@@ -1,0 +1,11 @@
+name: "DB Maintenance"
+description: "DB Maintenance module."
+package: Other
+core_version_requirement: ^8 || ^9 || ^10
+configure: db_maintenance.admin_settings
+type: module
+
+# Information added by Drupal.org packaging script on 2023-11-17
+version: '3.0.0-rc1'
+project: 'db_maintenance'
+datestamp: 1700236215

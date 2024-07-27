@@ -1,0 +1,14 @@
+{
+  "name": "drupal/registration_link",
+  "description": "This module provides a 'Register' link to user account menu.",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "registration link"],
+  "homepage": "https://www.drupal.org/project/registration_link",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/registration_link",
+    "source": "https://git.drupalcode.org/project/registration_link"
+  },
+  "require": {
+    "drupal/core": "^8.0 || ^9.0 || ^10"
+  }
+}

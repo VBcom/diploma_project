@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks for Registration Link module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function registration_link_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.registration_link':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      if (\Drupal::moduleHandler()->moduleExists('menu_ui')) {
+        $output .= '<p>' . t('The Registration Link module provides a "Register an Account" link in the <a href=":user-account-menu">user account menu</a>.', [':user-account-menu' => Url::fromRoute('entity.menu.edit_form', ['menu' => 'account'])->toString()]) . '</p>';
+      }
+      else {
+        $output .= '<p>' . t('The Registration Link module provides a "Register an Account" link in the user account menu.') . '</p>';
+      }
+      $output .= '<p>' . t('It is only visible to users with permission to register users, and to not logged in (anonymous) users, if they are <a href=":register-accounts">allowed to register</a>.', [':register-accounts' => Url::fromRoute('entity.user.admin_form')->toString()]) . '</p>';
+      $output .= '<p>' . t('The login and my account links are default, the registration link is missing. This module creates a menu entry with the appropriate settings.') . '</p>';
+      $output .= '<p>' . t('As with other menu links, you can place it in any menu you like.') . '</p>';
+      return $output;
+  }
+}

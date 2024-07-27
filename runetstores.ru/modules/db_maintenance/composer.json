@@ -1,0 +1,24 @@
+{
+    "name": "drupal/db_maintenance",
+    "type": "drupal-module",
+    "description": "DB Maintenance module",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://www.drupal.org/project/db_maintenance",
+    "authors": [
+        {
+            "name": "David N",
+            "homepage": "https://www.drupal.org/u/deekayen",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://www.drupal.org/node/41588/committers",
+            "role": "Contributors"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/db_maintenance",
+        "source": "http://cgit.drupalcode.org/db_maintenance"
+    }
+}

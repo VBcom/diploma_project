@@ -1,0 +1,7 @@
+services:
+  registration_link.registration_link_custom_access:
+    class: Drupal\registration_link\Access\RegistrationLinkAccessCheck
+    arguments:
+      ['@config.factory']
+    tags:
+      - { name: access_check, applies_to: _registration_link_custom_access }

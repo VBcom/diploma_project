@@ -1,0 +1,6 @@
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<nav class="nav">
+{% block content %}
+{{ content }}
+{% endblock %}
+</nav>

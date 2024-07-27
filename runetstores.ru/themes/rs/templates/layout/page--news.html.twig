@@ -1,0 +1,25 @@
+{% if page.header %}
+<header class="header">
+{{ page.header }}
+</header>
+{% endif %}
+{% if page.content or page.sidebar_first or page.top_first %}
+<main class="main page-news">
+<section class="sidebar">
+{% if page.sidebar_first %}
+{{ page.sidebar_first }}
+{% endif %}
+</section>
+{% if page.top_first %}
+<section id="section-top-first">
+{{ page.top_first }}
+</section>
+{% endif %}
+{{ page.content }}
+</main>
+{% endif %}
+{% if page.footer %}
+<footer class="footer">
+{{ page.footer }}
+</footer>
+{% endif %}

@@ -1,0 +1,8 @@
+registration_link.register:
+  path: '/user/register'
+  defaults:
+    _entity_form: 'user.register'
+    _title: 'Create new account'
+  requirements:
+    _registration_link_custom_access: 'TRUE'
+    _role: 'administrator+anonymous'

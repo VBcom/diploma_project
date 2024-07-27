@@ -1,0 +1,11 @@
+name: 'Disable link rel'
+description: 'Disable link rel all page'
+type: module
+configure: disable_link_rel.admin_settings
+
+core_version_requirement: ^8 || ^9 || ^10
+
+# Information added by Drupal.org packaging script on 2023-01-01
+version: '2.0.0'
+project: 'disable_link_rel'
+datestamp: 1672555327

@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * The main functionality of the module. Getting data and using it in hooks.
+ */
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+/**
+ * Implements hook_link_alter().
+ */
+function disable_link_rel_link_alter(&$variables): void {
+  $config = \Drupal::config('disable_link_rel.import');
+  $enable = $config->get('remove_link_attr');
+
+  if ($enable) {
+    $unsetAttrList = _disable_link_rel_parse_values($config->get('remove_link_attr_list', ''));
+    foreach ($unsetAttrList as $attr) {
+      if (array_key_exists($attr, $variables['options']['attributes'])) {
+        unset($variables['options']['attributes'][$attr]);
+      }
+    }
+    CacheableMetadata::createFromRenderArray($variables)
+      ->addCacheableDependency($config)
+      ->applyTo($variables);
+  }
+}
+
+/**
+ * Returns converted values.
+ *
+ * @param string $sourceData
+ *   The source value.
+ *
+ * @return string[]
+ *   The values array.
+ */
+function _disable_link_rel_parse_values($sourceData): array {
+  $values = [];
+  $splitData = explode(',', $sourceData);
+
+  array_walk_recursive($splitData, function ($value) use (&$values) {
+    $values[] = trim($value);
+  });
+
+  return $values;
+}

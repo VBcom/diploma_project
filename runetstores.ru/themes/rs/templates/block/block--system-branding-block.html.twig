@@ -1,0 +1,19 @@
+<div class="logo-name-slogan">
+  {% if site_logo %}
+    <div class="logo">
+    <a href="{{ path('<front>') }}" title="{{ 'RunetStores'|t }}" rel="home" class="logo-image">
+      <img width="60" height="60" src="{{ site_logo }}" srcset="/themes/rs/images/icons/runetstores-icon-256x256-circle.png 320w, /themes/rs/images/icons/runetstores-icon-256x256-circle.png 640w, /themes/rs/images/icons/runetstores-icon-256x256-circle.png 950w" sizes="100vw" alt="{{ 'RunetStores'|t }}" />
+    </a>
+    </div>
+  {% endif %}
+<div class="name-slogan">
+  {% if site_name %}
+    <div class="name">
+      <a href="{{ path('<front>') }}" title="{{ 'RunetStores'|t }}" rel="home">{{ site_name }}</a>
+    </div>
+  {% endif %}
+  {% if site_slogan %}
+    <div class="slogan">{{ site_slogan }}</div>
+  {% endif %}
+</div>
+</div>

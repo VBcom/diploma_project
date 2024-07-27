@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Add your custom theme override functions here.
+ */
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function rs_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+	$suggestions[] = 'page__' . $node->bundle();
+  }
+}

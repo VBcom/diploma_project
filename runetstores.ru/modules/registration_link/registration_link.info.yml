@@ -1,0 +1,11 @@
+name: 'Registration Link'
+description: 'The module provides a registration link for non-logged users in the User Menu.'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+type: module
+package: 'Menu'
+
+# Information added by Drupal.org packaging script on 2022-07-05
+version: '8.x-2.4'
+project: 'registration_link'
+datestamp: 1657050800

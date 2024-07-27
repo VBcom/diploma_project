@@ -1,0 +1,8 @@
+<section{{ attributes.addClass(classes) }}>
+{% if label %}
+<h2 class="block-title">{{ label }}</h2>
+{% endif %}
+{% block content %}
+{{ content }}
+{% endblock %}
+</section>
